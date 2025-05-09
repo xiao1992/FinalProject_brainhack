@@ -1,3 +1,5 @@
-theme: jekyll-theme-cayman
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-remote-theme
 title: EEG Emotion Regulation
 description: Project Proposal using DEAP Dataset and Contrastive Learning
