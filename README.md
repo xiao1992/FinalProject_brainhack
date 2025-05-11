@@ -8,7 +8,7 @@ This project aims to go beyond traditional emotion classification by predicting 
 
 ## Project Motivation
 Rather than just classifying emotional states (happy, sad, aroused, etc.), this project aims to predict an individual's ability to regulate their emotions based on their neurophysiological measures during emotional stimuli.
-![Emotion Regulation](https://behavioranalystresourcecenter.com/wp-content/uploads/Screenshot-2023-03-06-at-10.53.36-PM.png)
+![Emotion Regulation](https://illuminatingyou.com/wp-content/uploads/2023/10/AdobeStock_647250235-scaled.jpeg)
 
 ### Key Innovations:
 - Explore **emotion regulation**, not just emotion detection.
@@ -37,31 +37,22 @@ After each video, subjects rated their emotional experience on four self-assessm
 
 ## Assumptions for Labeling
 We hypothesize emotion regulation based on patterns in self-report and EEG:
-
 -	Low arousal with high valence after a high-arousal stimulus → possible regulation
 -	Use self-report 'liking' or 'familiarity' to infer engagement/regulation potential
 -	Compare early vs. late EEG segments to infer downregulation over time
 
-
 ---
 
 ## Scope & Constraints
-To ensure feasibility within BrainHack timeframe:
+To ensure feasibility within the BrainHack school project timeframe, I will narrow the scope by 1) selecting a smaller subset of 5 subjects (out of the full 32) chosen based on data quality and completeness, 2) reducing the number of video clips per subject to 10 (from 40), focusing on those with strong emotional signals to maximize label clarity, 3) limiting to a single emotion dimension—either valence or arousal.
 
-1. Use **5 subjects** with highest data quality
-2. Analyze **10 video clips per subject** (with strongest affective signal)
-3. Focus on **one emotion dimension** (valence or arousal)
-
-This proof-of-concept project lays groundwork for larger scale studies.
+The main focus of the project is proof-of-concept and contrast learning model training that will be fulfilled. Although generalizability may be limited, the approach provides a foundation for larger-scale validation in the future. 
 
 ---
 
 ## Methodology
 ### 1. **EEG Preprocessing**
-- Filtering, artifact removal (ICA), normalization
-- Time-locked segmentation (2–5 sec windows)
-- Feature extraction (Power Spectral Density)
-- Data augmentation for contrastive training
+Filter, ICA, normalization; segment into time-locked windows of 2-5s; Get Power Spectral Density (PSD) for each segment and apply augmentation methods for contrastive training. 
 
 ### 2. **Contrastive Learning**
 - Framework: SimCLR (or similar)
@@ -69,10 +60,7 @@ This proof-of-concept project lays groundwork for larger scale studies.
 Apply contrastive learning (SimCLR) to learn emotionally discriminative EEG features. Learn embeddings via contrastive loss; predict with simple classifier. The contrastive model uses a small neural network backbone (i.e a few convolutional or dense layers) trained with NT-Xent loss. After pretraining, the learned embeddings are fed into a simple MLP classifier that predicts the participant's emotional regulation.
 
 ### 3. **Classifier / Prediction**
-- Use learned embeddings to train:
-  - **MLP classifier**
-  - **Logistic / Linear regression (baseline)**
-  - **SVM**
+Use the embedding results to train a regression or classification model to predict emotional regulation performance. We will use 1) MLP on Contrastive Embeddings, 2) Logistic/Linear Regression for the baseline (set a performance floor to beat with deep models), 3) SVM on embeddings. For classification, we use the assumptions to categorize regulation success.
 
 **Emotion Regulation Score**
 - Based on self-report + EEG mismatch / time dynamics
@@ -88,12 +76,7 @@ Evaluation of the models include using F1 score, accuracy, ROC-AUC. Will also co
 ## Relevant Works
 - *X. Shen, X. Liu, X. Hu, D. Zhang and S. Song, "Contrastive Learning of Subject-Invariant EEG Representations for Cross-Subject Emotion Recognition," in IEEE Transactions on Affective Computing, vol. 14, no. 3, pp. 2496-2511, 1 July-Sept. 2023, doi: 10.1109/TAFFC.2022.3164516.
 - *Zhang, Hong, et al. "PhysioSync: Temporal and Cross-Modal Contrastive Learning Inspired by Physiological Synchronization for EEG-Based Emotion Recognition." 2025. arXiv:2504.17163.
-
----
-
-## Resources
 - [DEAP Dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
-- [SimCLR paper](https://arxiv.org/abs/2002.05709)
 
 ---
 
