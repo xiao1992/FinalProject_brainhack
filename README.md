@@ -1,5 +1,5 @@
-![Emotion Regulation](https://behavioranalystresourcecenter.com/wp-content/uploads/Screenshot-2023-03-06-at-10.53.36-PM.png)
-#Predicting Emotional Regulation from EEG Using Contrastive Learning
+
+# Predicting Emotional Regulation from EEG Using Contrastive Learning
 
 ## Overview
 
@@ -11,7 +11,7 @@ This project aims to go beyond traditional emotion classification by predicting 
 
 Rather than just classifying emotional states (happy, sad, aroused, etc.), this project aims to predict an individual's ability to regulate their emotions based on their neurophysiological measures during emotional stimuli.
 
-![Emotion Regulation](https://lindsaybraman.com/wp-content/uploads/2021/03/LB-2021-Rainbow-Regulation-SEL-SlidesB-2.png)
+![Emotion Regulation](https://behavioranalystresourcecenter.com/wp-content/uploads/Screenshot-2023-03-06-at-10.53.36-PM.png)
 
 ### Key Innovations:
 
