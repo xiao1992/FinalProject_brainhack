@@ -1,10 +1,9 @@
-![image](https://github.com/user-attachments/assets/cab10a1c-f7d8-4402-9a66-3027863ceb1e)![image](https://github.com/user-attachments/assets/909db9ee-1fa2-4445-bbdc-ebe3d91bef74)# Predicting Emotional Regulation from EEG Using Contrastive Learning
+![Emotion Regulation](https://behavioranalystresourcecenter.com/wp-content/uploads/Screenshot-2023-03-06-at-10.53.36-PM.png)
+#Predicting Emotional Regulation from EEG Using Contrastive Learning
 
 ## Overview
 
 This project aims to go beyond traditional emotion classification by predicting an individual's **ability to regulate emotions** from EEG signals during emotional stimulation. Using the DEAP open dataset, we apply cutting-edge contrastive learning techniques to model latent emotion regulation capacity from brain signals.
-
-![EEG Emotion](./29d5c9e9-550e-4d32-84bd-f6b833e0f690.png)
 
 ---
 
@@ -12,6 +11,7 @@ This project aims to go beyond traditional emotion classification by predicting 
 
 Rather than just classifying emotional states (happy, sad, aroused, etc.), this project aims to predict an individual's ability to regulate their emotions based on their neurophysiological measures during emotional stimuli.
 
+![Emotion Regulation](https://lindsaybraman.com/wp-content/uploads/2021/03/LB-2021-Rainbow-Regulation-SEL-SlidesB-2.png)
 
 ### Key Innovations:
 
@@ -112,6 +112,8 @@ Evaluation of the models include using F1 score, accuracy, ROC-AUC. Will also co
 - Incorporate peripheral modalities (GSR, EMG) into contrastive framework
 - Expand to all 32 subjects and full stimulus set
 - Include GCNs and PhsioSync (cross-modal & temporal contrastive learning) in the model training
+
+![Emotion Regulation](https://bewelltherapygroup.org/wp-content/uploads/2024/03/Untitled-design-67.png)
 
 ---
 
