@@ -2,19 +2,15 @@
 # Predicting Emotional Regulation from EEG Using Contrastive Learning
 
 ## Overview
-
 This project aims to go beyond traditional emotion classification by predicting an individual's **ability to regulate emotions** from EEG signals during emotional stimulation. Using the DEAP open dataset, we apply cutting-edge contrastive learning techniques to model latent emotion regulation capacity from brain signals.
 
 ---
 
 ## Project Motivation
-
 Rather than just classifying emotional states (happy, sad, aroused, etc.), this project aims to predict an individual's ability to regulate their emotions based on their neurophysiological measures during emotional stimuli.
-
 ![Emotion Regulation](https://behavioranalystresourcecenter.com/wp-content/uploads/Screenshot-2023-03-06-at-10.53.36-PM.png)
 
 ### Key Innovations:
-
 - Explore **emotion regulation**, not just emotion detection.
 - Try **contrastive learning**, a modern unsupervised deep learning approach for EEG.
 - Study cognitive neuroscience concepts using machine learning technique.
@@ -26,7 +22,6 @@ Another innovation is PhysioSync, which applies temporal and cross-modal contras
 ---
 
 ## Dataset: DEAP
-
 We use the [DEAP dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/):
 The DEAP dataset (Dataset for Emotion Analysis using Physiological Signals) is a widely used open dataset for study of affective states. Collected by Koelstra et al. (2012), the dataset provides a comprehensive framework for analyzing emotional responses to audiovisual stimuli and has become a benchmark for emotion recognition experiments.
 
@@ -41,7 +36,6 @@ After each video, subjects rated their emotional experience on four self-assessm
 ---
 
 ## Assumptions for Labeling
-
 We hypothesize emotion regulation based on patterns in self-report and EEG:
 
 -	Low arousal with high valence after a high-arousal stimulus → possible regulation
@@ -52,8 +46,7 @@ We hypothesize emotion regulation based on patterns in self-report and EEG:
 ---
 
 ## Scope & Constraints
-
-To ensure feasibility within BrainHack:
+To ensure feasibility within BrainHack timeframe:
 
 1. Use **5 subjects** with highest data quality
 2. Analyze **10 video clips per subject** (with strongest affective signal)
@@ -64,7 +57,6 @@ This proof-of-concept project lays groundwork for larger scale studies.
 ---
 
 ## Methodology
-
 ### 1. **EEG Preprocessing**
 - Filtering, artifact removal (ICA), normalization
 - Time-locked segmentation (2–5 sec windows)
@@ -94,25 +86,21 @@ Evaluation of the models include using F1 score, accuracy, ROC-AUC. Will also co
 ---
 
 ## Relevant Works
-
 - *X. Shen, X. Liu, X. Hu, D. Zhang and S. Song, "Contrastive Learning of Subject-Invariant EEG Representations for Cross-Subject Emotion Recognition," in IEEE Transactions on Affective Computing, vol. 14, no. 3, pp. 2496-2511, 1 July-Sept. 2023, doi: 10.1109/TAFFC.2022.3164516.
 - *Zhang, Hong, et al. "PhysioSync: Temporal and Cross-Modal Contrastive Learning Inspired by Physiological Synchronization for EEG-Based Emotion Recognition." 2025. arXiv:2504.17163.
 
 ---
 
 ## Resources
-
 - [DEAP Dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
 - [SimCLR paper](https://arxiv.org/abs/2002.05709)
 
 ---
 
 ## Future Work
-
 - Incorporate peripheral modalities (GSR, EMG) into contrastive framework
 - Expand to all 32 subjects and full stimulus set
 - Include GCNs and PhsioSync (cross-modal & temporal contrastive learning) in the model training
-
 ![Emotion Regulation](https://bewelltherapygroup.org/wp-content/uploads/2024/03/Untitled-design-67.png)
 
 ---
