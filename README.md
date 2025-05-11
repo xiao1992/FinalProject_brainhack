@@ -55,16 +55,15 @@ The main focus of the project is proof-of-concept and contrast learning model tr
 Filter, ICA, normalization; segment into time-locked windows of 2-5s; Get Power Spectral Density (PSD) for each segment and apply augmentation methods for contrastive training. 
 
 ### 2. **Contrastive Learning**
-- Framework: SimCLR (or similar)
-- Loss: NT-Xent (contrastive loss)
+Framework: SimCLR
+Loss: NT-Xent (contrastive loss)
 Apply contrastive learning (SimCLR) to learn emotionally discriminative EEG features. Learn embeddings via contrastive loss; predict with simple classifier. The contrastive model uses a small neural network backbone (i.e a few convolutional or dense layers) trained with NT-Xent loss. After pretraining, the learned embeddings are fed into a simple MLP classifier that predicts the participant's emotional regulation.
 
 ### 3. **Classifier / Prediction**
 Use the embedding results to train a regression or classification model to predict emotional regulation performance. We will use 1) MLP on Contrastive Embeddings, 2) Logistic/Linear Regression for the baseline (set a performance floor to beat with deep models), 3) SVM on embeddings. For classification, we use the assumptions to categorize regulation success.
 
 **Emotion Regulation Score**
-- Based on self-report + EEG mismatch / time dynamics
-- Binary or continuous target depending on assumption
+Based on self-report + EEG mismatch / time dynamics.
 
 ---
 
@@ -74,16 +73,17 @@ Evaluation of the models include using F1 score, accuracy, ROC-AUC. Will also co
 ---
 
 ## Relevant Works
-- *X. Shen, X. Liu, X. Hu, D. Zhang and S. Song, "Contrastive Learning of Subject-Invariant EEG Representations for Cross-Subject Emotion Recognition," in IEEE Transactions on Affective Computing, vol. 14, no. 3, pp. 2496-2511, 1 July-Sept. 2023, doi: 10.1109/TAFFC.2022.3164516.
-- *Zhang, Hong, et al. "PhysioSync: Temporal and Cross-Modal Contrastive Learning Inspired by Physiological Synchronization for EEG-Based Emotion Recognition." 2025. arXiv:2504.17163.
-- [DEAP Dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
+*X. Shen, X. Liu, X. Hu, D. Zhang and S. Song, "Contrastive Learning of Subject-Invariant EEG Representations for Cross-Subject Emotion Recognition," in IEEE Transactions on Affective Computing, vol. 14, no. 3, pp. 2496-2511, 1 July-Sept. 2023, doi: 10.1109/TAFFC.2022.3164516.
+*Zhang, Hong, et al. "PhysioSync: Temporal and Cross-Modal Contrastive Learning Inspired by Physiological Synchronization for EEG-Based Emotion Recognition." 2025. arXiv:2504.17163.
+[DEAP Dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
 
 ---
 
 ## Future Work
-- Incorporate peripheral modalities (GSR, EMG) into contrastive framework
-- Expand to all 32 subjects and full stimulus set
-- Include GCNs and PhsioSync (cross-modal & temporal contrastive learning) in the model training
+Incorporate peripheral modalities (GSR, EMG) into contrastive framework;
+Expand to all 32 subjects and full stimulus set;
+Include GCNs and PhsioSync (cross-modal & temporal contrastive learning) in the model training;
+Explore methods (such as meditaiton, journaling) to help with emotion awareness.
 ![Emotion Regulation](https://bewelltherapygroup.org/wp-content/uploads/2024/03/Untitled-design-67.png)
 
 ---
