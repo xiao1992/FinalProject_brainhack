@@ -1,5 +1,5 @@
 
-# Predicting Emotional Regulation from EEG Using Contrastive Learning
+# Predicting Emotional Regulation from EEG Using Contrastive Learning 😐😄😢😠😍
 
 ## Overview
 This project aims to go beyond traditional emotion classification by predicting an individual's **ability to regulate emotions** from EEG signals during emotional stimulation. Using the DEAP open dataset, we apply cutting-edge contrastive learning techniques to model latent emotion regulation capacity from brain signals.
